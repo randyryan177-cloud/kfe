@@ -1,8 +1,27 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #FAFAFA;
   --foreground: #171717;
+  
+  /* Forest Green Palette */
+  --forest-deep: #0F2E22;
+  --forest-dark: #1B4332;
+  --forest-medium: #2D6A4F;
+  --forest-light: #40916C;
+  --forest-bright: #52B788;
+  
+  /* Earthy Tones */
+  --earth-warm: #D4A373;
+  --earth-brown: #A98467;
+  --earth-sand: #FAEDCD;
+  
+  /* Zinc Backgrounds */
+  --zinc-50: #FAFAFA;
+  --zinc-100: #F4F4F5;
+  --zinc-200: #E4E4E7;
+  --zinc-800: #27272A;
+  --zinc-900: #18181B;
 }
 
 @theme inline {
@@ -10,17 +29,45 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  
+  /* Custom Forest Colors */
+  --color-forest-deep: var(--forest-deep);
+  --color-forest-dark: var(--forest-dark);
+  --color-forest-medium: var(--forest-medium);
+  --color-forest-light: var(--forest-light);
+  --color-forest-bright: var(--forest-bright);
+  
+  /* Earthy Colors */
+  --color-earth-warm: var(--earth-warm);
+  --color-earth-brown: var(--earth-brown);
+  --color-earth-sand: var(--earth-sand);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #0F2E22;
+    --foreground: #FAFAFA;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
+  line-height: 1.7;
+}
+
+/* Editorial Typography */
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+p {
+  line-height: 1.75;
+}
+
+/* Smooth Scroll Behavior */
+html {
+  scroll-behavior: smooth;
 }
